@@ -15,6 +15,11 @@ def main():
             pages_to_read = list_books(book_info, i)
             print("{} books.".format(count))
             print("You need to read {} pages in {} books.\n".format(sum(pages_to_read), len(pages_to_read)))
+        elif menu_input.lower() == "a":
+            print(input("Title: ")
+            print(input("Author: ")
+            print(input("Pages: "))
+            print(input("")
         print(MENU)
         menu_input = input(">>> ")
 
