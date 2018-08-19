@@ -12,14 +12,12 @@ def main():
     while menu_input.lower() != "q":
         if menu_input.lower() == "l":
             book_info = refresh_book_list(file_open)
-            count = len(book_info)
-            refresh_book_list(file_open)
-            pages_to_read = list_books(book_info, i)
-            print("{} books.".format(count))
-            print("You need to read {} pages in {} books.\n".format(sum(pages_to_read), len(pages_to_read)))
+            list_books(book_info, i)
         elif menu_input.lower() == "a":
             book_author, book_pages, book_title = add_book(file_open)
             print("{} by {}, ({} pages) added to Reading Tracker\n".format(book_title, book_author, book_pages))
+        elif menu_input.lower() == "m":
+            pass
         print(MENU)
         menu_input = input(">>> ")
 
@@ -60,7 +58,9 @@ def list_books(book_info, i):
             book_completed = ""
 
         print("{:<1}{}. {:<40} by {:<20} {} pages".format(book_completed, i, book_title, book_author, book_pages))
-    return pages_to_read
+    print("{} books.".format(i))
+    print("You need to read {} pages in {} books.\n".format(sum(pages_to_read), len(pages_to_read)))
+
 
 
 main()
