@@ -7,15 +7,15 @@ File needs reformatting
 
 STATE_NAMES = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
                "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
-for i in STATE_NAMES:
-    print("{:<3} is {}".format(i, STATE_NAMES[i]))
+for state in STATE_NAMES:
+    print("{:<3} is {}".format(state, STATE_NAMES[state]))
 
-state = input("Enter short state: ")
-while state != "":
-    if state.upper() in STATE_NAMES:
-        print(state.upper(), "is", STATE_NAMES[state.upper()])
+state_abbreviation = input("Enter short state: ")
+while state_abbreviation != "":
+    if state_abbreviation.upper() in STATE_NAMES:
+        print(state_abbreviation.upper(), "is", STATE_NAMES[state_abbreviation.upper()])
     else:
         print("Invalid short state")
-    state = input("Enter short state: ")
+    state_abbreviation = input("Enter short state: ")
 
 #Updating to feedback branch
