@@ -32,6 +32,9 @@ class DynamicWidgetsApp(App):
         self.title = "Dynamic Widgets"
         self.root = Builder.load_file('dynamic_widgets.kv')
         self.create_widgets()
+        temp_button = Button(text="Test")
+        self.root.ids.entries_box.add_widget(temp_button)
+        temp_button.bind(on_release=self.press_entry)
         return self.root
 
     def create_widgets(self):

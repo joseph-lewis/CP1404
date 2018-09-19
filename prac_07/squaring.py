@@ -19,6 +19,7 @@ class SquareNumberApp(App):
         Window.size = (200, 100)
         self.title = "Square Number"
         self.root = Builder.load_file('squaring.kv')
+        self.root.ids.display_label.text = 'Enter a number and Press "Square"'
         return self.root
 
     def handle_calculate(self, value):
