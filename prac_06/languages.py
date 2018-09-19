@@ -13,8 +13,11 @@ def main():
 
     print("The dynamically typed languages are:")
     for language in languages:
-        if language.is_dynamic() is True:
+        if language.is_dynamic():
             print(language.language_name)
+
+
+
 
 
 main()
